@@ -45,7 +45,10 @@ class Command(SyncCommon):
 
     def _clear_south_cache(self):
         for mig in list(migration.all_migrations()):
-            delattr(mig._application, "migrations")
+            try:
+                delattr(mig._application, "migrations")
+            except AttributeError:
+                pass
         Migrations._clear_cache()
 
     def _migrate_schema(self, tenant):
