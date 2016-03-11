@@ -12,7 +12,7 @@ __version__ = "1.4.0"
 
 setup(
     name='django-tenant-schemas',
-    version=get_git_version(),
+    version="1.5.5.1",
     author='Bernardo Pires Carneiro',
     author_email='carneiro.be@gmail.com',
     packages=[
